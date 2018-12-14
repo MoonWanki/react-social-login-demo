@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 import COLORS from '../utils/colors'
@@ -31,35 +30,9 @@ const AccessToken = ({ token }) => {
 }
 
 export default class UserCard extends Component {
-  static propTypes = {
-    user: PropTypes.shape({
-      _profile: PropTypes.object,
-      _token: PropTypes.object
-    }),
-    logout: PropTypes.func
-  }
 
   render () {
-    const { user: { _profile, _token }, logout } = this.props
-    let expiration = 'unknown'
-
-    if (_token.expiresAt === Infinity) {
-      expiration = 'never/unknown (see provider doc)'
-    } else if (_token.expiresAt) {
-      const date = new Date(_token.expiresAt)
-      const year = date.getFullYear()
-      let month = date.getMonth() + 1
-      let day = date.getDate()
-      let hour = date.getHours()
-      let minute = date.getMinutes()
-
-      if (month < 10) month = `0${month}`
-      if (day < 10) day = `0${day}`
-      if (hour < 10) hour = `0${hour}`
-      if (minute < 10) minute = `0${minute}`
-
-      expiration = `${month}/${day}/${year} ${hour}:${minute}`
-    }
+    const { user: { id, email, accessToken, profilePicURL, name }, logout } = this.props
 
     const styles = {
       container: {
@@ -102,21 +75,18 @@ export default class UserCard extends Component {
       }
     }
 
-    const avatar = _profile.profilePicURL ||
+    const avatar = profilePicURL ||
       'https://maxcdn.icons8.com/Share/icon/p1em/users//gender_neutral_user1600.png'
 
     return (
       <div style={styles.container}>
-        <img style={styles.avatar} src={avatar} />
+        <img style={styles.avatar} src={avatar} alt='avatar' />
         <div style={styles.content}>
           <div style={styles.dataContainer}>
-            <div style={styles.id}>ID {_profile.id}</div>
-            <div style={styles.name}>{_profile.name}</div>
-            <Detail label='Firstname' data={_profile.firstName} />
-            <Detail label='Lastname' data={_profile.lastName} />
-            <Detail label='Email' data={_profile.email} />
-            <Detail label='Expiration' data={expiration} />
-            <AccessToken token={_token.accessToken} />
+            <div style={styles.id}>ID {id}</div>
+            <div style={styles.name}>{name}</div>
+            <Detail label='이메일' data={email} />
+            <AccessToken token={accessToken} />
           </div>
           <button style={styles.button} onClick={logout}>Logout</button>
         </div>

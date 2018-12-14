@@ -53,23 +53,12 @@ const login = () => new Promise((resolve, reject) => {
   })
 })
 
-const generateUser = ({ token_type, scope, expires_in, access_token, id, kakao_account, properties }) => {
+const generateUser = ({ access_token, id, properties }) => {
   return {
-    profile: {
-      id,
+      id: id,
       name: properties.nickname,
-      firstName: '',
-      lastName: '',
-      email: '',
-      profilePicURL: ''
-    },
-    token: {
+      profilePicURL: properties.profile_image,
       accessToken: access_token,
-      scope,
-      expiresIn: expires_in,
-      expiresAt: expires_in,
-      token_type
-    }
   }
 }
 

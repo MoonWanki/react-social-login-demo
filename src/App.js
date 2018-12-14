@@ -35,7 +35,7 @@ class App extends Component {
   onLoginSuccess = (user) => {
     this.setState({
       logged: true,
-      currentProvider: user._provider,
+      currentProvider: user.provider,
       user
     })
   }
@@ -72,7 +72,7 @@ class App extends Component {
           <SocialButton
             provider='kakao'
             appId='5cb0d5bd54536f37fc23b7bb8744ea16'
-            redirect='http://localhost:3000'
+            redirect='https://opensw.octopusfantasy.com'
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
@@ -84,7 +84,7 @@ class App extends Component {
           <SocialButton
             provider='kakao'
             appId='5cb0d5bd54536f37fc23b7bb8744ea16'
-            redirect='http://localhost:3000'
+            redirect='https://opensw.octopusfantasy.com'
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
@@ -93,11 +93,9 @@ class App extends Component {
           `}
           </code></pre>
           <SocialButton
-            autoCleanUri
             provider='naver'
-            appId='Wzrp65CQcHLALXh8OiIw'
-            // secretid='Mfx_1boen3'
-            redirect='https://localhost:8080'
+            appId='dyVigYWN6Omwus7nNgrv'
+            redirect='https://opensw.octopusfantasy.com'
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
@@ -108,7 +106,7 @@ class App extends Component {
           <SocialButton
             provider='naver'
             appId='Wzrp65CQcHLALXh8OiIw'
-            redirect='https://localhost:8080'
+            redirect='https://opensw.octopusfantasy.com'
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
@@ -121,7 +119,7 @@ class App extends Component {
           <SocialButton
             provider='snapchat'
             appId='951d3917-3aa7-4563-bf47-c2106dca2ca3'
-            redirect='https://localhost:8080'
+            redirect='https://opensw.octopusfantasy.com'
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
@@ -132,7 +130,7 @@ class App extends Component {
             <SocialButton
               provider='snapchat'
               appId='951d3917-3aa7-4563-bf47-c2106dca2ca3'
-              redirect='https://localhost:8080'
+              redirect='https://opensw.octopusfantasy.com'
               onLoginSuccess={this.onLoginSuccess}
               onLoginFailure={this.onLoginFailure}
               onLogoutSuccess={this.onLogoutSuccess}
@@ -144,8 +142,8 @@ class App extends Component {
 
           <SocialButton
             provider='yahoo'
-            appId='dj0yJmk9Tmx2Q3RIVGhUQkZZJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTMw'
-            redirect='https://deepakaggarwal7.github.io/'
+            appId='dj0yJmk9dk5hTTQ2cjdmdkthJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWEy'
+            redirect='https://opensw.octopusfantasy.com'
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
@@ -157,8 +155,8 @@ class App extends Component {
             <pre><code className="language-jsx">{`
               <SocialButton
               provider='yahoo'
-              appId='dj0yJmk9Tmx2Q3RIVGhUQkZZJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTMw'
-              redirect='https://deepakaggarwal7.github.io/'
+              appId='dj0yJmk9dk5hTTQ2cjdmdkthJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWEy'
+              redirect='https://opensw.octopusfantasy.com'
               onLoginSuccess={this.onLoginSuccess}
               onLoginFailure={this.onLoginFailure}
               onLogoutSuccess={this.onLogoutSuccess}
