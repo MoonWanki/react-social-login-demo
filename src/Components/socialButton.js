@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import SocialLogin from '../react-social-login';
 
 class Button extends Component {
@@ -10,6 +9,7 @@ class Button extends Component {
       display: 'inline-block',
       margin: '5px',
       padding: '10px 20px',
+      cursor: 'pointer'
     }
 
     return (

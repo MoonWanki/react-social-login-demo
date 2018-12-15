@@ -72,26 +72,31 @@ class App extends Component {
           <SocialButton
             provider='kakao'
             appId='5cb0d5bd54536f37fc23b7bb8744ea16'
-            redirect='https://opensw.octopusfantasy.com'
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
             getInstance={this.setNodeRef.bind(this, 'kakao')}
           >
-            Login with Kakao
+            <div style={{ background: 'gold', textAlign: 'center', padding: '20px 40px' }}>
+              <b>Login with Kakao</b>
+            </div>
           </SocialButton>
           <pre><code className="language-jsx">{`
-          <SocialButton
-            provider='kakao'
-            appId='5cb0d5bd54536f37fc23b7bb8744ea16'
-            redirect='https://opensw.octopusfantasy.com'
-            onLoginSuccess={this.onLoginSuccess}
-            onLoginFailure={this.onLoginFailure}
-            onLogoutSuccess={this.onLogoutSuccess}
-            getInstance={this.setNodeRef.bind(this, 'kakao')}
-          />
+  // kakao는 Redirect URL이 필요하지 않아요!
+  <SocialButton
+    provider='kakao'
+    appId='5cb0d5bd54536f37fc23b7bb8744ea16'
+    onLoginSuccess={this.onLoginSuccess}
+    onLoginFailure={this.onLoginFailure}
+    onLogoutSuccess={this.onLogoutSuccess}
+  >
+    <div style={{ background: 'gold', textAlign: 'center', padding: '20px 40px' }}>
+      <b>Login with Kakao</b>
+    </div>
+  </SocialButton>
           `}
           </code></pre>
+          <br/><br/>
           <SocialButton
             provider='naver'
             appId='dyVigYWN6Omwus7nNgrv'
@@ -100,22 +105,22 @@ class App extends Component {
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
             onLogoutFailure={this.onLogoutFailure}
-            getInstance={this.setNodeRef.bind(this, 'naver')}
           />
           <pre><code className="language-jsx">{`
-          <SocialButton
-            provider='naver'
-            appId='Wzrp65CQcHLALXh8OiIw'
-            redirect='https://opensw.octopusfantasy.com'
-            onLoginSuccess={this.onLoginSuccess}
-            onLoginFailure={this.onLoginFailure}
-            onLogoutSuccess={this.onLogoutSuccess}
-            onLogoutFailure={this.onLogoutFailure}
-            getInstance={this.setNodeRef.bind(this, 'naver')}
-          />
+  // 네이버 로그인 버튼 이미지는 SDK로부터 자체 제공됩니다.
+  // 본 웹사이트는 '네이버 아이디로 로그인' 검수를 거치지 않았기 때문에 개발자만 로그인 가능한 상태입니다.
+  <SocialButton
+    provider='naver'
+    appId='Wzrp65CQcHLALXh8OiIw'
+    redirect='https://opensw.octopusfantasy.com'
+    onLoginSuccess={this.onLoginSuccess}
+    onLoginFailure={this.onLoginFailure}
+    onLogoutSuccess={this.onLogoutSuccess}
+    onLogoutFailure={this.onLogoutFailure}
+  />
           `}
           </code></pre>
-
+          <br/><br/>
           <SocialButton
             provider='snapchat'
             appId='951d3917-3aa7-4563-bf47-c2106dca2ca3'
@@ -127,19 +132,19 @@ class App extends Component {
             getInstance={this.setNodeRef.bind(this, 'snapchat')}
           />
             <pre><code className="language-jsx">{`
-            <SocialButton
-              provider='snapchat'
-              appId='951d3917-3aa7-4563-bf47-c2106dca2ca3'
-              redirect='https://opensw.octopusfantasy.com'
-              onLoginSuccess={this.onLoginSuccess}
-              onLoginFailure={this.onLoginFailure}
-              onLogoutSuccess={this.onLogoutSuccess}
-              onLogoutFailure={this.onLogoutFailure}
-              getInstance={this.setNodeRef.bind(this, 'snapchat')}
-            />
+  // Snapchat 로그인 버튼 이미지는 SDK로부터 자체 제공됩니다.
+  <SocialButton
+    provider='snapchat'
+    appId='951d3917-3aa7-4563-bf47-c2106dca2ca3'
+    redirect='https://opensw.octopusfantasy.com'
+    onLoginSuccess={this.onLoginSuccess}
+    onLoginFailure={this.onLoginFailure}
+    onLogoutSuccess={this.onLogoutSuccess}
+    onLogoutFailure={this.onLogoutFailure}
+  />
             `}
             </code></pre>
-
+            <br/><br/>
           <SocialButton
             provider='yahoo'
             appId='dj0yJmk9dk5hTTQ2cjdmdkthJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWEy'
@@ -150,23 +155,27 @@ class App extends Component {
             onLogoutFailure={this.onLogoutFailure}
             getInstance={this.setNodeRef.bind(this, 'yahoo')}
           >
-            Login with Yahoo
+            <div style={{ background: 'purple', textAlign: 'center', color: 'white', padding: '20px 40px' }}>
+              <b>Login with YAHOO!</b>
+            </div>
           </SocialButton>
             <pre><code className="language-jsx">{`
-              <SocialButton
-              provider='yahoo'
-              appId='dj0yJmk9dk5hTTQ2cjdmdkthJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWEy'
-              redirect='https://opensw.octopusfantasy.com'
-              onLoginSuccess={this.onLoginSuccess}
-              onLoginFailure={this.onLoginFailure}
-              onLogoutSuccess={this.onLogoutSuccess}
-              onLogoutFailure={this.onLogoutFailure}
-              getInstance={this.setNodeRef.bind(this, 'yahoo')}
-            >
-              Login with Yahoo
-            </SocialButton>
+  <SocialButton
+    provider='yahoo'
+    appId='dj0yJmk9dk5hTTQ2cjdmdkthJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWEy'
+    redirect='https://opensw.octopusfantasy.com'
+    onLoginSuccess={this.onLoginSuccess}
+    onLoginFailure={this.onLoginFailure}
+    onLogoutSuccess={this.onLogoutSuccess}
+    onLogoutFailure={this.onLogoutFailure}
+  >
+    <div style={{ background: 'purple', textAlign: 'center', color: 'white', padding: '20px 40px' }}>
+      <b>Login with YAHOO!</b>
+    </div>
+  </SocialButton>
             `}
             </code></pre>
+            <br/><br/>
           </Fragment>
           }
         </div>
