@@ -104,7 +104,7 @@ class App extends Component {
             onLoginSuccess={this.onLoginSuccess}
             onLoginFailure={this.onLoginFailure}
             onLogoutSuccess={this.onLogoutSuccess}
-            onLogoutFailure={this.onLogoutFailure}
+            getInstance={this.setNodeRef.bind(this, 'naver')}
           />
           <pre><code className="language-jsx">{`
   // 네이버 로그인 버튼 이미지는 SDK로부터 자체 제공됩니다.
@@ -116,7 +116,6 @@ class App extends Component {
     onLoginSuccess={this.onLoginSuccess}
     onLoginFailure={this.onLoginFailure}
     onLogoutSuccess={this.onLogoutSuccess}
-    onLogoutFailure={this.onLogoutFailure}
   />
           `}
           </code></pre>

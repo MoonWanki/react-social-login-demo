@@ -60,11 +60,12 @@ const generateUser = ({ email, id, name, profile_image }) => {
   }
 }
 
-const logout = () => new Promise((resolve, reject) => {
+const logout = () => new Promise((resolve) => {
   naverLogin.logout();
   setTimeout(() => {
     window.location.href = '/';
-  }, 500)
+    return resolve();
+  }, 600)
 })
 
 export default {
